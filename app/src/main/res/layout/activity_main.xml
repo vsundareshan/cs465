@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hw3.sndrshn2.cs465.cs465_hw3.MainActivity"
+    android:elevation="1dp">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/toolbarbg">
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter Online ID "
+        android:ems="10"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/onlineID"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/textGrey"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:text="Save          Online ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/onlineID"
+        android:layout_toEndOf="@+id/onlineID"
+        android:id="@+id/saveIDCheck"
+        android:paddingRight="30dp"
+        android:textColor="@color/textGrey"
+        android:textStyle="bold"
+        android:buttonTint="@color/textGrey" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/textGrey"
+        android:layout_below="@+id/saveIDCheck"
+        android:layout_alignStart="@+id/onlineID"
+        android:layout_marginRight="160dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter Passcode"
+        android:ems="10"
+        android:layout_below="@+id/onlineID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/passcode"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/textGrey"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:text="Set up fingerprint sign-in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/passcode"
+        android:layout_toEndOf="@+id/passcode"
+        android:id="@+id/savePassCheck"
+        android:paddingRight="30dp"
+        android:textColor="@color/textGrey"
+        android:textStyle="bold"
+        android:buttonTint="@color/textGrey" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/textGrey"
+        android:layout_below="@+id/savePassCheck"
+        android:layout_alignStart="@+id/passcode"
+        android:layout_marginRight="160dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/signin"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/view2"
+        android:layout_marginStart="40dp"
+        android:id="@+id/imageView"
+        android:layout_marginTop="40dp"
+        android:paddingRight="50dp" />
+
+
+</RelativeLayout>
