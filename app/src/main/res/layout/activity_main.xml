@@ -29,7 +29,7 @@
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/onlineID"
         android:gravity="left|center_vertical"
         android:textColor="@color/textGrey"
@@ -42,7 +42,7 @@
         android:layout_alignTop="@+id/onlineID"
         android:layout_toEndOf="@+id/onlineID"
         android:id="@+id/saveIDCheck"
-        android:paddingRight="30dp"
+        android:paddingRight="20dp"
         android:textColor="@color/textGrey"
         android:textStyle="bold"
         android:buttonTint="@color/textGrey" />
@@ -64,7 +64,7 @@
         android:layout_below="@+id/onlineID"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/passcode"
         android:gravity="left|center_vertical"
         android:textColor="@color/textGrey"
@@ -95,11 +95,86 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/signin"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/view2"
         android:layout_marginStart="40dp"
-        android:id="@+id/imageView"
-        android:layout_marginTop="40dp"
-        android:paddingRight="50dp" />
+        android:id="@+id/signin"
+        android:layout_marginTop="25dp"
+        android:paddingRight="50dp"
+        android:layout_below="@+id/passcode"/>
 
+    <TextView
+        android:text="Display my saved Online IDs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/displayIDs"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:textColor="@color/link" />
+
+    <TextView
+        android:text="Need help with your ID, Passcode or enrollment?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayIDs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/needHelp"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:textColor="@color/link" />
+
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/needHelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:rowCount="2"
+        app:columnCount="2">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/whatsnew"
+            android:layout_centerVertical="true"
+            android:id="@+id/whatsnew"
+            app:layout_row="0"
+            app:layout_column="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/lowauto"
+            android:layout_centerVertical="true"
+            android:id="@+id/lowauto"
+            app:layout_row="0"
+            app:layout_column="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/appointment"
+            android:layout_centerVertical="true"
+            android:id="@+id/appointment"
+            app:layout_row="1"
+            app:layout_column="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/explore"
+            android:layout_centerVertical="true"
+            android:id="@+id/explore"
+            app:layout_row="1"
+            app:layout_column="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
+    </android.support.v7.widget.GridLayout>
 
 </RelativeLayout>
