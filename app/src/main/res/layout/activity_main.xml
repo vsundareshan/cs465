@@ -9,14 +9,14 @@
     android:elevation="1dp">
 
     <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
         android:theme="?attr/actionBarTheme"
         android:minHeight="?attr/actionBarSize"
         android:id="@+id/toolbar"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/toolbarbg">
+        android:background="@drawable/toolbarbg"
+        android:layout_height="wrap_content">
 
     </android.support.v7.widget.Toolbar>
 
@@ -29,20 +29,20 @@
         android:layout_below="@+id/toolbar"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:id="@+id/onlineID"
         android:gravity="left|center_vertical"
         android:textColor="@color/textGrey"
         android:textStyle="bold" />
 
     <CheckBox
-        android:text="Save          Online ID"
+        android:text="Save Online ID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/onlineID"
         android:layout_toEndOf="@+id/onlineID"
         android:id="@+id/saveIDCheck"
-        android:paddingRight="20dp"
+        android:paddingRight="50dp"
         android:textColor="@color/textGrey"
         android:textStyle="bold"
         android:buttonTint="@color/textGrey" />
@@ -64,7 +64,7 @@
         android:layout_below="@+id/onlineID"
         android:layout_alignParentStart="true"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/passcode"
         android:gravity="left|center_vertical"
         android:textColor="@color/textGrey"
@@ -97,7 +97,7 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="40dp"
         android:id="@+id/signin"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:paddingRight="50dp"
         android:layout_below="@+id/passcode"/>
 
@@ -131,50 +131,107 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/needHelp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:rowCount="2"
-        app:columnCount="2">
+        app:columnCount="2"
+        android:id="@+id/gridlayout">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
             app:srcCompat="@drawable/whatsnew"
-            android:layout_centerVertical="true"
             android:id="@+id/whatsnew"
             app:layout_row="0"
             app:layout_column="0"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitXY"
+            app:layout_gravity="top|left"
+            android:layout_centerVertical="false"
+            android:padding="3dp" />
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
             app:srcCompat="@drawable/lowauto"
             android:layout_centerVertical="true"
             android:id="@+id/lowauto"
             app:layout_row="0"
             app:layout_column="1"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitXY"
+            app:layout_gravity="top|right"
+            android:padding="3dp" />
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/appointment"
-            android:layout_centerVertical="true"
-            android:id="@+id/appointment"
-            app:layout_row="1"
-            app:layout_column="0"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
             app:srcCompat="@drawable/explore"
             android:layout_centerVertical="true"
             android:id="@+id/explore"
             app:layout_row="1"
             app:layout_column="1"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitXY"
+            app:layout_gravity="top"
+            android:padding="3dp" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/appointment"
+            android:layout_centerVertical="true"
+            android:id="@+id/appointment"
+            app:layout_row="1"
+            app:layout_column="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_gravity="bottom|left"
+            android:padding="3dp" />
     </android.support.v7.widget.GridLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/locicon"
+        android:layout_below="@+id/gridlayout"
+        android:layout_alignStart="@+id/signin"
+        android:layout_marginTop="10dp"
+        android:id="@+id/locicon"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:text="Find a Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/locicon"
+        android:layout_toRightOf="@+id/locicon"
+        android:layout_marginStart="15dp"
+        android:id="@+id/loctext"
+        android:textColor="@color/link"
+        android:paddingTop="15dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/contactus"
+        android:layout_alignTop="@+id/loctext"
+        android:layout_toRightOf="@+id/loctext"
+        android:id="@+id/contactus"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Contact Us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/contactus"
+        android:layout_toRightOf="@+id/contactus"
+        android:id="@+id/textView2"
+        android:textColor="@color/link"
+        android:paddingTop="5dp" />
 
 </RelativeLayout>
